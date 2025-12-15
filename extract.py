@@ -6,5 +6,5 @@ data = {
     'name' :['sandip','kishan','ritik'],
     'age':[22,21,22]
 }
-df = pd.dataframe(data)
+df = pd.DataFrame(data)
 print(df)
