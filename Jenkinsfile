@@ -1,18 +1,19 @@
 pipeline {
-    agent any 
-    stages {
-        stage('checkout code'){
-            steps {
-                checkout scm
+    agent any
 
+    stages {
+
+        stage('Checkout Code') {
+            steps {
+                git 'https://github.com/sandipkharat7272-source/jenkins-demo1.git'
             }
         }
-        stages('extract data') {
-           steps {
-                bat "python extract.py"
-                 
-           } 
-        }  
-    
+
+        stage('Extract Data') {
+            steps {
+                echo 'Extracting data'
+            }
+        }
+
     }
 }
