@@ -1,16 +1,16 @@
 pipeline {
     agent any 
     stages {
-        stages ('checkout code'){
+        stage('checkout code'){
             steps {
                 checkout scm
 
             }
         }
         stages('extract data') {
-           stages {
-            bat "python extract .py"
-
+           steps {
+                bat "python extract.py"
+                 
            } 
         }  
     
